@@ -131,3 +131,21 @@ button:hover {
     transform: scale(1);
   }
 }
+
+@media (max-width: 600px) {
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .App {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
