@@ -132,7 +132,15 @@ button:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .App {
+    padding: 20px;
+  }
+
   input {
     width: 100%;
   }
@@ -141,11 +149,19 @@ button:hover {
     width: 100%;
   }
 
-  .App {
-    padding: 20px;
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.7rem;
   }
 
-  h1 {
-    font-size: 2rem;
+  input, button {
+    font-size: 0.95rem;
+    padding: 8px 12px;
   }
 }
