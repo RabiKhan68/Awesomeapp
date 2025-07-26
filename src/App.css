@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* General reset */
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  padding: 30px;
+}
+
+/* Container styling */
+.App {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  animation: floatIn 0.6s ease-in-out;
+}
+
+/* Logo + Heading */
+h1 {
+  color: #ff4081;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Input and button */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 10px;
+  width: 60%;
+  border-radius: 10px;
+  border: 2px solid #ff4081;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #e91e63;
+  background-color: #fff0f5;
+}
+
+button {
+  background-color: #ff4081;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
   color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #e91e63;
 }
 
-@keyframes App-logo-spin {
+/* Result block */
+.result {
+  background-color: #fffaf0;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px dashed #ff80ab;
+  margin-top: 20px;
+  animation: popIn 0.5s ease;
+}
+
+.meaning-block {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.meaning-block h3 {
+  color: #ff4081;
+  text-transform: capitalize;
+}
+
+.meaning-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meaning-block li {
+  background-color: #ffe4ec;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Error message */
+.error {
+  color: red;
+  font-weight: bold;
+  background: #ffe0e0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes floatIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
